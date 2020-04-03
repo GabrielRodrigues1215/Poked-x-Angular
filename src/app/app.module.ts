@@ -24,7 +24,7 @@ import { BuscadorPokemonComponent } from './components/buscador-pokemon/buscador
     HomeComponent,
     PokemonsComponent,
     PokemonInfoComponent,
-    BuscadorPokemonComponent
+    BuscadorPokemonComponent,
   ],
   imports: [
     BrowserModule,

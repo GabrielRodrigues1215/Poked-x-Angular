@@ -1,13 +1,40 @@
 <div class="page-header">
-    <h1 >Pokemons</h1>
+    <h1 >Pokemons <a *ngIf="show">da {{region}}</a></h1>
 </div>
+
+<div class="row container">
+    <h3>Regions: </h3>
+    <div class="col-md-1">
+        <button class="btn btn-secondary my-2 my-sm-0" (click) = "obterPokemonsRegion('g1')" >Kanto</button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-secondary my-2 my-sm-0" (click) = "obterPokemonsRegion('g2')" >Johto</button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-secondary my-2 my-sm-0" (click) = "obterPokemonsRegion('g3')" >Hoenn</button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-secondary my-2 my-sm-0" (click) = "obterPokemonsRegion('g4')" >Sinnoh</button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-secondary my-2 my-sm-0" (click) = "obterPokemonsRegion('g5')" >Unova</button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-secondary my-2 my-sm-0" (click) = "obterPokemonsRegion('g6')" >Kalos</button>
+    </div>
+</div>
+<p></p>
 <div class="row">
     <div class="col-md-3" *ngFor="let pokemon of pokemons">
         <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
             <div class="card-body">
                 <a [routerLink]="['/pokemon',pokemon.id]"><img class="img-responsive" src="{{pokemon.image}}" alt=""></a>
             </div>
+            <div class="card-footer">
+                <div class="white-color ">Nº {{pokemon.id}} </div>
+            </div>  
             <div class="card-footer white-color text-center">{{pokemon.name}}</div>
+
           </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 
 export interface PokemonRules{
   id:number;
@@ -19936,6 +19936,63 @@ export class PokemonsService {
 
   obterPokemons(){
     return this.pokemons
+  }
+  obterPokemonsRegion(region:string){
+    let pokeRegion = [];
+    console.log(region)
+
+    
+    switch(region) {
+      case "g1": {
+        for(let pokemon of this.pokemons){
+          if(pokemon.id < 152){
+            pokeRegion.push(pokemon)
+          }
+        }
+          break;
+      }
+      case "g2": {
+        for(let pokemon of this.pokemons){
+          if(pokemon.id > 151 && pokemon.id < 252){
+            pokeRegion.push(pokemon)
+          }
+        }
+          break;
+      }
+      case "g3": {
+        for(let pokemon of this.pokemons){
+          if(pokemon.id > 251 && pokemon.id < 386){
+            pokeRegion.push(pokemon)
+          }
+        }
+          break;
+      }
+      case "g4": {
+        for(let pokemon of this.pokemons){
+          if(pokemon.id > 386 && pokemon.id < 493){
+            pokeRegion.push(pokemon)
+          }
+        }
+          break;
+      }
+      case "g5": {
+        for(let pokemon of this.pokemons){
+          if(pokemon.id >494 && pokemon.id < 650){
+            pokeRegion.push(pokemon)
+          }
+        }
+          break;
+      }
+      case "g6": {
+        for(let pokemon of this.pokemons){
+          if(pokemon.id > 649 && pokemon.id < 718){
+            pokeRegion.push(pokemon)
+          }
+        }
+          break;
+      }
+  }
+    return pokeRegion;
   }
   obterPokemon(id:number){
     let pokeArr = [];

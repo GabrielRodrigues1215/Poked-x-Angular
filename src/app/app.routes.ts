@@ -9,6 +9,8 @@ import { BuscadorPokemonComponent } from './components/buscador-pokemon/buscador
 
 
 
+
+
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'pokemons', component: PokemonsComponent },
