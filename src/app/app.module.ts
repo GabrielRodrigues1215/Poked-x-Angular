@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.com
 import { BuscadorPokemonComponent } from './components/buscador-pokemon/buscador-pokemon.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { BuscadorPokemonComponent } from './components/buscador-pokemon/buscador
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     POKE_ROUTING
